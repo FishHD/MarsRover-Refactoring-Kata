@@ -49,8 +49,8 @@ public class MarsRoverTest {
 
     @Test
     public void acceptance_test_8() {
-        String newPosition = MarsRover.move(0, 0, 'W', "MLMLMRMLMLMRMRMLMLMLMRMRMLMRMRMLMLMLMRMLMLMRMRMRMLMLMRMRMLMRMRM");
-        assertEquals("4 4 S", newPosition);
+        String newPosition = MarsRover.move(5, 5, 'W', "MLMLMRMLMLMRMRMLMLMLMRMRMLMRMRMLMLMLMRMLMLMRMRMRMLMLMRMRMLMRMRM");
+        assertEquals("9 9 S", newPosition);
     }
 
     @Test
