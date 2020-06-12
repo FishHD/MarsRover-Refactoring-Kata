@@ -1,9 +1,10 @@
 package mars.rover;
 
+import java.util.Arrays;
+
 public class MarsRover {
 
     private static final char[] DIRECTIONS = {'N', 'E', 'S', 'W'};
-
 
     public static String move(int x, int y, char direction, String instructions) {
         if (!instructions.isEmpty()) {
