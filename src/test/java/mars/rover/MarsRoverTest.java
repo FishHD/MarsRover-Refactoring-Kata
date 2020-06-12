@@ -23,21 +23,25 @@ public class MarsRoverTest {
         String newPosition = MarsRover.move(-1, -1, 'S', "RMMR");
     }
 
-    @Test(expected = IllegalArgumentException.class)
+    @Test
     public void acceptance_test_4_position_error() {
         String newPosition = MarsRover.move(0, 0, 'N', "LM");
+        assertEquals("0 0 W", newPosition);
     }
 
+    @Test
     public void acceptance_test_5() {
         String newPosition = MarsRover.move(0, 0, 'N', "LLLL");
         assertEquals("0 0 N", newPosition);
     }
 
+    @Test
     public void acceptance_test_6() {
         String newPosition = MarsRover.move(0, 0, 'N', "RRRR");
         assertEquals("0 0 N", newPosition);
     }
 
+    @Test
     public void acceptance_test_7() {
         String newPosition = MarsRover.move(0, 0, 'N', "MRMRMRMR");
         assertEquals("0 0 N", newPosition);

@@ -16,15 +16,24 @@ Lucas Straub, Yannik Wailzer
 
 public class MarsRover {
 
-    private static char[] DIRECTIONS = {'N', 'E', 'S', 'W'};
-
     public static String move(int x, int y, char direction, String instructions) {
         if(x<0 || y<0) {
             throw new IllegalArgumentException();
         }
 
+        if(direction!='N' && direction!='E' && direction!='S' && direction!='W') {
+            throw new IllegalArgumentException();
+        }
+
+
+
         if (!instructions.isEmpty()) {
             char instruction = instructions.charAt(0);
+
+            if(instruction!='L' && instruction!='M' && instruction!='R') {
+                throw new IllegalArgumentException();
+            }
+
             char nextDirection = nextDirection(instruction, direction);
             if(x+moveX(instruction, nextDirection)>=0 && y+moveY(instruction, nextDirection)>=0) {
                 return move(x+moveX(instruction, nextDirection), y+moveY(instruction, nextDirection), nextDirection, instructions.substring(1));
@@ -37,6 +46,8 @@ public class MarsRover {
     }
 
     private static char nextDirection(char instruction, char direction) {
+        char[] DIRECTIONS = {'N', 'E', 'S', 'W'};
+
         int len = DIRECTIONS.length;
         int index = IntStream.range(0, len)
                 .filter(i -> direction == DIRECTIONS[i])
