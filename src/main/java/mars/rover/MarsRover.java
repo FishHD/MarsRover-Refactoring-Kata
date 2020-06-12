@@ -1,7 +1,7 @@
 package mars.rover;
 
 public class MarsRover {
-    // Toller Kommentar
+
     public static String move(int x, int y, char direction, String instructions) {
         if (!instructions.isEmpty()) {
             char instruction = instructions.charAt(0);
