@@ -1,7 +1,9 @@
 package mars.rover;
 
 public class MarsRover {
-    // Toller Kommentar
+
+    private static final char[] DIRECTIONS = {'N', 'E', 'S', 'W'};
+
     public static String move(int x, int y, char direction, String instructions) {
         if (!instructions.isEmpty()) {
             char instruction = instructions.charAt(0);
