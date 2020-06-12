@@ -1,10 +1,10 @@
 package mars.rover;
 
-import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-class MarsRoverTest {
+public class MarsRoverTest {
 
     @Test
     public void
@@ -18,6 +18,19 @@ class MarsRoverTest {
     acceptance_test_2() {
         String newPosition = MarsRover.move(3, 3, 'E', "MMRMMRMRRM");
         assertEquals("5 1 E", newPosition);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void
+    yannikTest1() {
+        String newPosition = MarsRover.move(-1, -1, 'S', "RMMR");
+    }
+
+    @Test
+    public void
+    yannikTest2() {
+        String newPosition = MarsRover.move(-1, -1, 'S', "RMMR");
+        assertEquals("-1 -1 S", newPosition);
     }
 
 }
