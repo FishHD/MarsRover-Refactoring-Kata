@@ -7,10 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="mars-rover-refactoring-kata" />
+        <module name="MarsRover-Refactoring-Kata" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="mars-rover-refactoring-kata" target="1.8" />
+      <module name="MarsRover-Refactoring-Kata" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

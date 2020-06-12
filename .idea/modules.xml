@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mars-rover-refactoring-kata.iml" filepath="$PROJECT_DIR$/mars-rover-refactoring-kata.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MarsRover-Refactoring-Kata.iml" filepath="$PROJECT_DIR$/.idea/MarsRover-Refactoring-Kata.iml" />
     </modules>
   </component>
 </project>
